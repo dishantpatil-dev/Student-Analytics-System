@@ -1,0 +1,6 @@
+/vendor/
+/uploads/*
+!.gitkeep
+
+.env
+*.log

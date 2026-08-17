@@ -1,0 +1,368 @@
+/* ---------- RESET ---------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:
+radial-gradient(circle at top right,#143c6b 0%,transparent 35%),
+radial-gradient(circle at bottom left,#0b3b45 0%,transparent 35%),
+#0f172a;
+overflow-x:hidden;
+color:#fff;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar{
+height:70px;
+background:#111827;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* ---------- SIDEBAR ---------- */
+
+.sidebar{
+position:fixed;
+top:70px;
+left:0;
+width:250px;
+height:100%;
+background:#111827;
+padding:25px;
+}
+
+.logo{
+font-size:42px;
+font-weight:bold;
+color:#00d4ff;
+text-align:center;
+margin-bottom:35px;
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+}
+
+.sidebar ul li{
+margin:12px 0;
+}
+
+.sidebar ul li a{
+display:flex;
+align-items:center;
+gap:12px;
+padding:14px 18px;
+border-radius:12px;
+text-decoration:none;
+color:#cbd5e1;
+transition:.35s;
+}
+
+.sidebar ul li a:hover{
+background:#1f2937;
+color:#00d4ff;
+padding-left:28px;
+}
+
+/* ---------- CONTENT ---------- */
+
+.main-content{
+margin-left:250px;
+padding:95px 30px;
+}
+
+/* ---------- CARD ---------- */
+
+.card{
+position:relative;
+background:#1e293b;
+border:2px solid rgba(255,255,255,.05);
+border-radius:22px;
+color:#fff;
+overflow:hidden;
+transition:.35s ease;
+}
+
+.card::before{
+content:"";
+position:absolute;
+width:260px;
+height:260px;
+background:linear-gradient(
+90deg,
+transparent,
+#00d4ff,
+transparent
+);
+top:-120px;
+left:-240px;
+transform:rotate(25deg);
+filter:blur(10px);
+opacity:0;
+transition:.8s;
+}
+
+.card:hover::before{
+left:120%;
+opacity:1;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#00d4ff;
+box-shadow:
+0 0 12px rgba(0,212,255,.45),
+0 0 30px rgba(0,212,255,.25),
+0 20px 45px rgba(0,0,0,.45);
+}
+
+/* ---------- PREMIUM DASHBOARD CARDS ---------- */
+
+.stat-card{
+
+position:relative;
+min-height:150px;
+padding:28px;
+
+border-radius:22px;
+
+overflow:hidden;
+
+background:#20293c;
+
+cursor:pointer;
+
+transition:.4s;
+
+z-index:1;
+.stat-card h2{
+    font-size:3rem;
+    font-weight:700;
+}
+
+}
+
+.stat-card::before{
+
+content:"";
+
+position:absolute;
+
+width:220px;
+
+height:220px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#00d4ff,
+transparent
+);
+
+top:-90px;
+
+left:-180px;
+
+transform:rotate(25deg);
+
+transition:.7s;
+
+filter:blur(10px);
+
+opacity:0;
+
+}
+
+.stat-card:hover::before{
+
+left:120%;
+
+opacity:1;
+
+}
+
+.stat-card::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:22px;
+
+padding:2px;
+
+background:linear-gradient(
+135deg,
+rgba(255,255,255,.05),
+rgba(255,255,255,0)
+);
+
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+
+mask-composite:exclude;
+
+pointer-events:none;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-10px) scale(1.02);
+
+box-shadow:
+
+0 0 18px rgba(0,212,255,.25),
+
+0 0 40px rgba(0,212,255,.20),
+
+0 25px 45px rgba(0,0,0,.45);
+
+}
+
+.card-icon{
+
+font-size:42;
+
+transition:.4s;
+
+}
+
+.stat-card:hover .card-icon{
+
+transform:scale(1.15);
+
+}
+
+/* ---------- COLORS ---------- */
+
+.total-card{
+
+border-left:4px solid #00d4ff;
+
+}
+
+.attendance-card{
+
+border-left:4px solid #22c55e;
+
+}
+
+.marks-card{
+
+border-left:4px solid #f59e0b;
+
+}
+
+.teacher-card{
+
+border-left:4px solid #3b82f6;
+
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn{
+
+border-radius:10px;
+
+transition:.35s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+/* ---------- TABLE ---------- */
+
+table{
+
+color:#fff!important;
+
+}
+
+/* ---------- CHART ---------- */
+canvas{
+padding:10px;
+transition:.4s;
+}
+
+canvas:hover{
+transform:scale(1.02);
+}
+.progress-circle{
+position:relative;
+width:130px;
+height:130px;
+}
+
+.progress-circle svg{
+transform:rotate(0deg);
+}
+
+.progress-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:26px;
+font-weight:bold;
+color:#00d4ff;
+}
+
+.progress-circle circle:last-child{
+transition:stroke-dashoffset 1.2s ease;
+filter:drop-shadow(0 0 12px rgba(0,212,255,.8));
+}
+
+.progress-circle svg{
+overflow:visible;
+}
+
+.progress-circle{
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+}
+.stat-card{
+transition:all .35s ease;
+cursor:pointer;
+}
+
+.stat-card:hover{
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 0 25px rgba(0,212,255,.35);
+}
+
+.progress-circle{
+animation:zoomIn .8s ease;
+}
+
+@keyframes zoomIn{
+
+0%{
+transform:scale(.7);
+opacity:0;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
