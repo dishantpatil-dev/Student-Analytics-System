@@ -20,7 +20,7 @@
 
 ## 🎯 Overview
 
-Student Analytics System converts student information, attendance and marks into organized records, performance analytics and exportable reports.
+Student Analytics System converts student information, attendance and marks into organized records, performance analytics and exportable reports. The repository documents the PHP/MySQL implementation, its local setup, and the reporting workflows available in the application.
 
 It is designed around a simple workflow:
 
